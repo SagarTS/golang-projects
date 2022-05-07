@@ -1,0 +1,1 @@
+Will be doing some projects for learning purpose and final own project
