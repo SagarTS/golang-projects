@@ -12,6 +12,6 @@ func main(){
 
 func myDefer(){
 	for i := 0; i < 5; i++ {
-		defer fmt.Println(i)
+		defer fmt.Print(i)
 	}
 }
