@@ -2,6 +2,7 @@ package routes
 
 import (
 	"architecture/api/controllers"
+	"architecture/api/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,7 +10,7 @@ import (
 func SetupRouter() *gin.Engine {
 	r := gin.Default()
 	r.POST("/register", controllers.RegisterUser)
-	r.POST("/login", controllers.LoginUser)
+	r.POST("/login", middlewares.RateLimiter() ,controllers.LoginUser)
 
 	return r
 }
